@@ -96,7 +96,7 @@ DATABASES = {
     "default": {
         # "ENGINE": "django.db.backends.sqlite3",
         # "NAME": BASE_DIR / "db.sqlite3",
-        "ENGINE": "django.db.backends.postgresql",
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
         "NAME": "railway",
         "USER": "postgres",
         "PASSWORD": "C*aA2c3cb-aBE-fCcD*3CcDdabebE25C",
@@ -140,12 +140,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+import tempfile
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 STATIC_URL = "/static/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build", "static")
+
 MEDIA_DIR = BASE_DIR / "media"
-MEDIA_ROOT = MEDIA_DIR
+MEDIA_ROOT = str(tempfile.mkdtemp())  # Use /tmp for Lambda
 MEDIA_URL = "/media/"
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
