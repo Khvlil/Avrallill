@@ -1,0 +1,70 @@
+{% load static %}
+<!-- Project Window -->
+{% for project in projects %}
+<div
+  class="project bg-gradient-to-b from-[rgb(26,37,51)] via-opacity-0 to-transparent h-fit lg:h-[540px] w-full lg:hover:translate-y-[-20px] transition duration-[0.3s] ease-in-out"
+>
+  <div class="relative">
+    {% if project.project_flow == 'process' %}
+    <div
+      class="bg-[#15191E] px-[22px] py-[8px] text-white rounded-bl-[5px] absolute top-0 right-0 capitalize flex gap-[8px] justify-center items-center"
+    >
+      <span class="font-bold capitalize">Process</span
+      ><i class="fa-solid fa-spinner animate-spin" style="color: #ffffff"></i>
+    </div>
+    {% else %}
+    <div
+      class="bg-[#15191E] px-[22px] py-[8px] text-white rounded-bl-[5px] absolute top-0 right-0 capitalize flex gap-[8px] justify-center items-center"
+    >
+      <span class="font-bold capitalize">Complete</span
+      ><i class="fa-solid fa-check" style="color: #17ff2e"></i>
+    </div>
+    {% endif %}
+
+    <img
+      class="rounded-t-[5px] max-h-[300px] lg:max-h-[220px] lg:h-[220px] w-full object-cover skelton"
+      src="{{ project.project_cover.url }}"
+      alt="project.project"
+    />
+  </div>
+  <div class="flex flex-col gap-[10px] px-[12px] p-[17px]">
+    <span class="text-2xl font-bold text-white">{{ project.project }}</span>
+    <p
+      class="text-md font-thin text-[#bababa] line-clamp-4 text-ellipsis overflow-hidden whitespace-normal"
+    >
+      {{ project.project_overview }}
+    </p>
+    <img
+      class="w-28 aspect-[3/2] object-contain"
+      src="{{ project.project_logo.url }}"
+      alt="project.project"
+    />
+  </div>
+  <a
+    hx-get="{% url 'show_project' project_name=project.project %}"
+    hx-target="body"
+    hx-swap="outerHTML"
+    class="show-modal self-end mx-[12px] bg-[#3998EF] px-[18px] py-[8px] my-[10px] rounded-[5px] w-fit flex gap-[14px] items-center justify-center hover:bg-[#3956EF] ease-in-out duration-100 float-right"
+  >
+    <span class="text-white text-sm capitalize read cursor-pointer"
+      >read more</span
+    >
+    <i
+      class="fa-solid fa-angle-right read-hover:animate-bounce text-sm"
+      style="color: #ffffff"
+    ></i>
+  </a>
+</div>
+{% endfor %} {% if projects.has_next %}
+<button
+  id="load_more"
+  class="justify-self-center col-start-2 col-end-3 bg-[#243347] px-[27px] py-[10px] w-fit rounded-full flex gap-[18px] items-center justify-center hover:bg-[#374D6A] ease-in-out duration-100"
+  type="button"
+  hx-get="{% url 'get_work_type' type_=load_type %}?page={{ projects.next_page_number }}"
+  hx-target="#load_more"
+  hx-swap="outerHTML"
+>
+  <span class="text-white capitalize">show me more</span>
+  <i class="fa-solid fa-circle-chevron-down" style="color: #ffffff"></i>
+</button>
+{% endif %}

@@ -1,0 +1,72 @@
+{% load static %}
+<nav
+  class="sticky z-[999999] top-[10px] lg:top-[30px] my-[30px] px-[8px] lg:px-[50px] flex row-reverse lg:flex-row justify-between items-center"
+>
+  <a href="/">
+    <img
+      class="h-[40px] lg:h-[55px] filter saturate-100 invert-[.99] sepia-[.1] saturate-0 hue-rotate-[53deg] brightness-105 contrast-[.101]"
+      alt="Avraham"
+      id="Avraham"
+      src="{% static 'Loader.png' %}"
+    />
+  </a>
+</nav>
+
+<div
+  id="bottomNav"
+  class="sm:hidden w-[40%] rounded-[30px] px-[12px] py-[8px] lg:flex flex-row justify-between items-center fixed bottom-[30px] left-0 right-0 mx-auto z-[1000000] bg-gradient-to-tl from-[rgba(255, 255, 255, 1)] to-[rgba(255, 255, 255, 1)] backdrop-blur-[10px] border-[1px] border-solid"
+>
+  <ul class="flex flex-row basis-1/2 justify-evenly">
+    <li class="text-xl font-bold text-white"><a href="#Tool">Tools</a></li>
+    <li class="text-xl font-bold text-white"><a href="#Projects">Work</a></li>
+    <li class="text-xl font-bold text-white">
+      <a href="#Contact-us">Contact</a>
+    </li>
+  </ul>
+  <img src="{% static 'Logo.png' %}" class="h-[50px]" alt="Avraham" />
+</div>
+
+<script>
+  let mybutton = document.getElementById("bottomNav");
+
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    let scrollTop =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    let scrollHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+
+    if (scrollTop > 200 && scrollHeight - scrollTop > 390) {
+      mybutton.classList.add("show");
+    } else {
+      mybutton.classList.remove("show");
+    }
+  }
+</script>
+
+{% block style %}
+<style>
+  #bottomNav {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: fixed;
+    bottom: 30px;
+  }
+
+  #bottomNav.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media screen and (max-width: 981px) {
+    #bottomNav {
+      display: none;
+    }
+  }
+</style>
+{% endblock style %}

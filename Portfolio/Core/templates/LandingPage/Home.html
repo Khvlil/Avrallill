@@ -1,0 +1,1035 @@
+{% extends "Base.html" %} {% load static %} {% block title %} Avrallill
+{%endblock title %} {% block content %}
+<!--<img id="Hand_Second" src="{% static 'Hand_Second.png' %}" alt="" class="hidden lg:block absolute bottom-[-24em] right-[-30%] w-[32em] z-10"/>
+
+<img
+  id="Hand"
+  src="{% static 'Hand.png' %}"
+  alt=""
+  class="hidden lg:block absolute left-[-30%] z-10 top-[50%] w-[32em] translate-y-[180deg]"
+/>-->
+<div
+  class="blurry_morph absolute top-0 lg:top-[-100%] z-0 w-full h-[300px] lg:h-[1000px] lg:w-[1000px]"
+  style="
+    background-image: radial-gradient(
+      closest-side,
+      rgba(75, 57, 239, 0.21),
+      rgba(0, 0, 0, 0)
+    );
+  "
+></div>
+
+<div class="text-[#8b8986] relative" id="title">
+  <div
+    class="figma-light block absolute left-4 lg:left-16 rotate-[320deg] bg-[url('../static/Tools/Figma.png')] bg-cover bg-no-repeat w-16 h-16 lg:h-44 lg:w-44"
+  >
+    <img
+      src="{% static 'Tools/Figma.png' %}"
+      class="h-16 lg:h-44 shadowfilter"
+      alt=""
+    />
+  </div>
+
+  <div
+    class="webflow-light absolute right-[2%] lg:right-32 top-[200px] lg:top-[300px] rotate-[12deg] bg-[url('../static/Tools/Webflow-Short.png')] bg-cover bg-no-repeat h-20 w-20 lg:h-56 lg:w-56"
+  >
+    <img
+      src="{% static 'Tools/Webflow-Short.png' %}"
+      class="shadowfilter h-20 w-20 lg:h-56 lg:w-56"
+      alt=""
+    />
+  </div>
+
+  <div
+    class="flutterflow-light lg:block absolute bottom-[10%] lg:bottom-0 left-[5%] lg:left-8 rotate-[20deg] bg-[url('../static/Tools/Flutterflow-Short.png')] bg-cover bg-no-repeat w-16 h-16 lg:h-[140px] lg:w-[140px]"
+  >
+    <img
+      src="{% static 'Tools/Flutterflow-Short.png' %}"
+      class="shadowfilter w-16 h-16 lg:h-[140px] lg:w-[140px]"
+      alt=""
+    />
+  </div>
+
+  <div class="mx-[20px] xl:mx-[200px] flex flex-col items-center">
+    <p
+      class="inline font-bold text-center z-10 leading-[7rem]"
+      style="
+        font-size: clamp(3rem, 10vw, 8rem);
+        line-height: clamp(3rem, 10vw, 7rem);
+      "
+    >
+      We create digital
+      <img
+        class="inline rounded-full h-[30px] w-[50%] lg:w-[30%] lg:h-[100px] object-cover"
+        src="{% static 'EYE.jpg' %}"
+        alt=""
+      />
+      solutions no just
+      <span
+        class="inline-block text-transparent bg-clip-text"
+        style="background-image: linear-gradient(to right, #4b39ef, #3998ef)"
+        >websites</span
+      >
+    </p>
+
+    <p
+      class="text-md font-thin opacity-[0.6] mb-[20px] text-center lg:ml-auto xl:mx-auto"
+    >
+      Creating Customized Solutions for Long-Term Online Success.
+    </p>
+
+    <a
+      hx-post="{% url 'contact_us' %}"
+      hx-swap="transition:true"
+      hx-target="body"
+      class="z-10 cursor-pointer mt-[13px] bg-blue-700 hover:bg-gradient-to-r hover:from-[#4b39ef] hover:to-[#3998ef] duration-300 ease-in rounded-md text-white font-bold px-10 py-2"
+      style="font-size: clamp(1.125rem, 1.5vw, 2.4rem)"
+    >
+      Let's Build Together
+    </a>
+
+    <div
+      class="dash hidden md:block relative h-full text-center bg-gradient-to-t from-transparent lg:h-[30em] w-full rounded-[5px]"
+    >
+      <img
+        src="{% static 'Snippet.png' %}"
+        class="snippet h-full w-full xl:h-[48em] mx-auto object-contain translate-y-[30px] lg:-translate-y-0 rounded-sm"
+        alt=""
+      />
+    </div>
+  </div>
+</div>
+
+<!--Background page-->
+<section class="mt-[50px] xl:mt-[20em] min-[1540px]:mt-[30em]">
+  <!--<div class="bg-slate-400 mx-[20px] xl:mx-[200px] mb-[20px] h-[600px] rounded-3xl"></div>-->
+
+  <!--Servers-->
+  <div class="relative xl:mt-[300px] xl:mb-[40px] flex flex-col gap-[3em]">
+    <div
+      class="blurry_morph absolute lg:left-[-30%] z-0 w-full h-[300px] lg:h-[1000px] lg:w-[1000px]"
+      style="
+        background-image: radial-gradient(
+          closest-side,
+          rgba(75, 57, 239, 0.21),
+          rgba(0, 0, 0, 0)
+        );
+      "
+    ></div>
+    <div
+      class="relative overflow-hidden mx-[20px] xl:mx-[200px] h-[600px] md:h-[500px] rounded-lg bg-gradient-to-b from-[#171635] to-violet-700 group"
+    >
+      <span
+        class="lg:absolute top-5 right-0 left-0 px-[10px] 2xl:px-[50px] py-[10px] 2xl:py-[10px] w-full lg:w-auto text-4xl lg:mx-auto lg:text-5xl 2xl:leading-[4.5rem] 2xl:text-6xl font-bold text-white capitalize"
+        >Our apps dance to your smartphone's rhythm</span
+      >
+      <img
+        id="Iphone"
+        src="{% static 'Iphone.png' %}"
+        class="absolute bottom-0 md:bottom-[-33%] md:group-hover:bottom-[-30%] duration-[0.5s] ease-in-out right-0"
+        alt=""
+      />
+      <div
+        class="flex flex-col gap-[1rem] absolute left-5 bottom-5 group-hover:bottom-12 opacity-[0.6] duration-300 ease-in"
+      >
+        <img
+          src="{% static 'Playstore.png' %}"
+          class="hidden xl:block aspect-1/3 w-8 invisible group-hover:visible duration-300 ease-in-out"
+          alt=""
+        />
+        <img
+          src="{% static 'Appstore.png' %}"
+          class="hidden xl:block aspect-1/3 w-8 invisible group-hover:visible duration-300 ease-in-out"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div
+      class="relative overflow-hidden mx-[20px] xl:mx-[200px] h-[600px] md:h-[500px] rounded-lg bg-gradient-to-b from-[#171635] to-violet-600 group"
+    >
+      <span
+        class="absolute top-5 right-0 left-0 text-center text-5xl leading-[3.4rem] 2xl:text-6xl font-bold text-white capitalize"
+        >And play big on your laptop's stage</span
+      >
+      <img
+        src="{% static 'MacBook.png' %}"
+        class="absolute bottom-0 md:h-[80%] lg:h-full xl:bottom-[-180px] xl:group-hover:bottom-[-140px] duration-[0.5s] ease-in-out left-0 right-0 mx-auto"
+        alt=""
+      />
+    </div>
+  </div>
+
+  <!--Tools-->
+  <div id="Tool"></div>
+  <div class="relative">
+    <div
+      class="mx-[20px] xl:mx-[200px] my-[120px] grid grid-cols-2 auto-rows-auto lg:grid-cols-5 lg:grid-row-2 gap-[8px] lg:gap-[15px]"
+    >
+      <div
+        class="blurry_morph absolute lg:left-[-40%] lg:top-[-50%] z-0 w-full h-[300px] lg:h-[1000px] lg:w-[1000px]"
+        style="
+          background-image: radial-gradient(
+            closest-side,
+            rgba(75, 57, 239, 0.21),
+            rgba(0, 0, 0, 0)
+          );
+        "
+      ></div>
+      <div
+        class="blurry_morph absolute lg:right-[-30%] z-0 w-full h-[300px] lg:h-[1000px] lg:w-[1000px]"
+        style="
+          background-image: radial-gradient(
+            closest-side,
+            rgba(75, 57, 239, 0.21),
+            rgba(0, 0, 0, 0)
+          );
+        "
+      ></div>
+
+      <div
+        class="tool lg:h-[320px] bg-gradient-to-b from-[rgb(26,37,51)] via-opacity-0 to-transparent rounded-[5px] flex justify-center items-center relative overflow-hidden hover:h-[100%] group"
+      >
+        <!--Initial image-->
+        <img
+          class="h-[160px] transition-transform transform hover:scale-105 object-cover"
+          src="{% static 'Tools/Figma.png' %}"
+          alt="Figma"
+        />
+
+        <!--Hover image-->
+        <div
+          class="hidden lg:block bg-[rgb(26,37,51)] absolute top-0 left-0 opacity-0 hover:opacity-100 transition-opacity duration-500 px-[16px] pt-[16px] h-full"
+        >
+          <p class="text-white text-[1.7rem]">
+            Your Vision, Our Canvas Bringing Ideas to Life.
+          </p>
+          <img
+            class="w-[700px] absolute bottom-[-67px] right-[-57px]"
+            src="{% static 'Tools/Figma.png' %}"
+            alt="Figma"
+          />
+        </div>
+      </div>
+
+      <div
+        class="tool lg:h-[320px] bg-gradient-to-b from-[rgb(26,37,51)] via-opacity-0 to-transparent rounded-[5px] flex justify-center items-center relative overflow-hidden hover:h-[100%] group"
+      >
+        <!--Initial image-->
+        <img
+          class="h-[140px] transition-transform transform hover:scale-105 object-cover"
+          src="{% static 'Tools/AdobeXD.png' %}"
+          alt="AdobeXD"
+        />
+
+        <!--Hover image-->
+        <div
+          class="hidden lg:block bg-[rgb(26,37,51)] absolute top-0 left-0 opacity-0 hover:opacity-100 transition-opacity duration-500 px-[16px] pt-[16px] h-full"
+        >
+          <p class="text-white text-[1.55rem]">
+            Where Creativity Meets Precision in User Experience.
+          </p>
+          <img
+            class="w-[10em] absolute bottom-[-67px] right-[-57px]"
+            src="{% static 'Tools/AdobeXD.png' %}"
+            alt="AdobeXD"
+          />
+        </div>
+      </div>
+
+      <div class="tool lg:col-start-3 lg:col-end-5 relative">
+        <img
+          class="h-full object-cover rounded-[5px]"
+          src="{% static 'Tools/Webflow.jpg' %}"
+          alt="Webflow"
+        />
+        <!--Hover image-->
+        <div
+          class="hidden lg:block bg-[rgb(26,37,51)] absolute top-0 left-0 opacity-0 hover:opacity-100 transition-opacity duration-500 px-[16px] pt-[16px] h-full overflow-hidden"
+        >
+          <p class="text-white text-[2.2rem]">
+            Web Design Beyond Boundaries, Your Ideas, Our Code.
+          </p>
+          <img
+            class="w-[10em] absolute bottom-[0px] right-[0px]"
+            src="{% static 'Tools/Webflow-Short.png' %}"
+            alt="Webflow"
+            style="width: 17em; bottom: -25%; right: -10%"
+          />
+        </div>
+      </div>
+
+      <div
+        class="tool lg:col-start-5 lg:col-end-6 lg:row-start-1 lg:row-end-3 relative"
+      >
+        <img
+          class="h-full object-cover rounded-[5px]"
+          src="{% static 'Tools/FlutterFlow.jpg' %}"
+          alt="FlutterFlow"
+        />
+        <!--Hover image-->
+        <div
+          class="hidden lg:block bg-[rgb(26,37,51)] absolute top-0 left-0 opacity-0 hover:opacity-100 transition-opacity duration-500 px-[16px] pt-[16px] h-full w-full"
+        >
+          <p class="text-white text-[2.1rem]">
+            Fluttering Innovation, Flowing Seamless Solutions.
+          </p>
+          <img
+            class="w-[8em] absolute bottom-[-10px] right-[0px]"
+            src="{% static 'Tools/Flutterflow-Short.png' %}"
+            alt="FlutterFlow"
+          />
+        </div>
+      </div>
+
+      <div
+        class="tool col-start-1 col-end-3 lg:col-start-3 lg:col-end-5 lg:row-start-2 lg:row-end-3 bg-gradient-to-b from-[rgb(26,37,51)] via-opacity-0 to-transparent rounded-[5px] px-[25px] py-[20px] flex flex-col gap-[10px] hover:h-[100%] group"
+      >
+        <span class="text-[#8b8986] font-bold text-2xl"
+          >Flexible Solution Providers</span
+        >
+        <p class="text-[#8b8986] leading-[1.7rem] text-base">
+          Our innovative solution enablers ensure that every project is a
+          tailored answer to your unique challenges by arming your vision with a
+          strategic toolkit.
+        </p>
+      </div>
+
+      <div
+        class="tool bg-gradient-to-b from-[rgb(26,37,51)] via-opacity-0 to-transparent rounded-[5px] flex justify-center items-center relative overflow-hidden hover:h-[100%] group"
+      >
+        <!--Initial image-->
+        <img
+          class="h-[160px] transition-transform transform hover:scale-105"
+          src="{% static 'Tools/Illustrator.png' %}"
+          alt="Illustrator"
+        />
+
+        <!--Hover image-->
+        <div
+          class="hidden lg:block bg-[rgb(26,37,51)] absolute top-0 left-0 opacity-0 hover:opacity-100 transition-opacity duration-500 px-[16px] pt-[16px] h-full"
+        >
+          <p class="text-white text-[1.2rem]">
+            Illustrating Possibilities, Designing Tomorrow.
+          </p>
+          <img
+            class="h-[9em] absolute bottom-[-43px] right-[-39px]"
+            src="{% static 'Tools/Illustrator.png' %}"
+            alt="Illustrator"
+          />
+        </div>
+      </div>
+
+      <div
+        class="tool bg-gradient-to-b from-[rgb(26,37,51)] via-opacity-0 to-transparent rounded-[5px] flex justify-center items-center relative overflow-hidden hover:h-[100%] group"
+      >
+        <!--Initial image-->
+        <img
+          class="h-[118px] transition-transform transform hover:scale-105"
+          src="{% static 'Tools/PS.png' %}"
+          alt="Photoshop"
+        />
+
+        <!--Hover image-->
+        <div
+          class="hidden lg:block bg-[rgb(26,37,51)] absolute top-0 left-0 opacity-0 hover:opacity-100 transition-opacity duration-500 px-[16px] pt-[16px] h-full"
+        >
+          <p class="text-white text-[1.2rem]">
+            Pixel by Pixel, Creating Visual Success Stories..
+          </p>
+          <img
+            class="h-[97px] absolute bottom-[-43px] right-[-39px]"
+            src="{% static 'Tools/PS.png' %}"
+            alt="Photoshop"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Projects-->
+  <div class="relative">
+    <div
+      class="blurry_morph absolute lg:left-[-30%] z-0 w-full h-[300px] lg:h-[1000px] lg:w-[1000px]"
+      style="
+        background-image: radial-gradient(
+          closest-side,
+          rgba(75, 57, 239, 0.21),
+          rgba(0, 0, 0, 0)
+        );
+      "
+    ></div>
+
+    <div
+      class="flex flex-col gap-[3rem] mt-[60px] mb-[140px] 2xl:mb-[30px] mx-[20px] xl:mx-[200px]"
+      id="Projects"
+    >
+      <div
+        class="sticky top-[65px] z-10 lg:relative lg:top-0 flex gap-[30px] self-end"
+      >
+        <input
+          type="radio"
+          id="webRadioButton"
+          name="workType"
+          class="hidden peer/draft"
+          value="web"
+          hx-get="{% url 'get_work_type' type_='web' %}"
+          hx-target="#applications"
+          hx-swap="innerHTML show:window-top"
+          checked
+        />
+        <label
+          for="webRadioButton"
+          class="peer-checked/draft:bg-[#4B39EF] peer-checked/draft:hover:bg-[#4B39EF] px-[30px] py-[8px] text-white rounded-[5px] capitalize cursor-pointer transition-colors duration-300 ease-in-out bg-[#243347] hover:bg-[#243347] dark:bg-[#4B39EF] dark:hover:bg-[#4B39EF]"
+        >
+          web
+        </label>
+
+        <input
+          type="radio"
+          id="mobileRadioButton"
+          name="workType"
+          class="hidden peer/coco"
+          value="mobile"
+          hx-get="{% url 'get_work_type' type_='mobile' %}"
+          hx-target="#applications"
+          hx-swap="innerHTML show:window-top"
+        />
+        <label
+          for="mobileRadioButton"
+          class="peer-checked/coco:bg-[#4B39EF] peer-checked/coco:hover:bg-[#4B39EF] px-[30px] py-[8px] text-white rounded-[5px] capitalize cursor-pointer transition-colors duration-300 ease-in-out bg-[#243347] hover:bg-[#243347] dark:bg-[#4B39EF] dark:hover:bg-[#4B39EF]"
+        >
+          mobile
+        </label>
+      </div>
+
+      <div
+        class="grid grid-cols-1 min-[591px]:grid-cols-2 min-[998px]:grid-cols-3 max-[1001px]:gap-y-[40px] gap-[20px] z-0 justify-between items-center"
+        id="applications"
+      >
+        {% include "Components/Works.html" %}
+      </div>
+    </div>
+  </div>
+
+  <img
+    src="{% static 'Signature.png' %}"
+    class="hidden 2xl:block opacity-[0.04] h-96 mx-auto"
+    alt=""
+  />
+
+  <!--Companies-->
+  <div class="relative">
+    <div
+      class="blurry_morph hidden absolute mx-auto lg:top-0 z-0 w-full h-[300px] lg:h-[1000px] lg:w-[1000px]"
+      style="
+        background-image: radial-gradient(
+          closest-side,
+          rgba(75, 57, 239, 0.21),
+          rgba(0, 0, 0, 0)
+        );
+      "
+    ></div>
+    <div
+      class="mb-[140px] overflow-hidden whitespace-nowrap opacity-[0.3] animo"
+    >
+      <div class="inline-flex slide_">
+        <img
+          class="h-[45px] aspect-[3/2] object-contain lg:h-[120px] mx-[20px]"
+          src="{% static 'Companies/Leafe.png' %}"
+          alt="Leafe"
+        />
+        <img
+          class="h-[45px] aspect-[3/2] object-contain lg:h-[120px] mx-[20px]"
+          src="{% static 'Companies/Penta.png' %}"
+          alt="Penta"
+        />
+        <img
+          class="h-[45px] aspect-[3/2] object-contain lg:h-[120px] mx-[20px]"
+          src="{% static 'Companies/Levelup.png' %}"
+          alt="Levelup"
+        />
+        <img
+          class="h-[45px] aspect-[3/2] object-contain lg:h-[120px] mx-[20px]"
+          src="{% static 'Companies/Proline.png' %}"
+          alt="Proline"
+        />
+        <img
+          class="h-[45px] aspect-[3/2] object-contain lg:h-[120px] mx-[20px]"
+          src="{% static 'Companies/Vision.png' %}"
+          alt="Vision"
+        />
+        <img
+          class="h-[45px] aspect-[3/2] object-contain lg:h-[120px] mx-[20px]"
+          src="{% static 'Companies/Waveless.png' %}"
+          alt="Waveless"
+        />
+      </div>
+      <div class="inline-flex slide_">
+        <img
+          class="h-[45px] aspect-[3/2] object-contain lg:h-[120px] mx-[20px]"
+          src="{% static 'Companies/Leafe.png' %}"
+          alt="Leafe"
+        />
+        <img
+          class="h-[45px] aspect-[3/2] object-contain lg:h-[120px] mx-[20px]"
+          src="{% static 'Companies/Penta.png' %}"
+          alt="Penta"
+        />
+        <img
+          class="h-[45px] aspect-[3/2] object-contain lg:h-[120px] mx-[20px]"
+          src="{% static 'Companies/Levelup.png' %}"
+          alt="Levelup"
+        />
+        <img
+          class="h-[45px] aspect-[3/2] object-contain lg:h-[120px] mx-[20px]"
+          src="{% static 'Companies/Proline.png' %}"
+          alt="Proline"
+        />
+        <img
+          class="h-[45px] aspect-[3/2] object-contain lg:h-[120px] mx-[20px]"
+          src="{% static 'Companies/Vision.png' %}"
+          alt="Vision"
+        />
+        <img
+          class="h-[45px] aspect-[3/2] object-contain lg:h-[120px] mx-[20px]"
+          src="{% static 'Companies/Waveless.png' %}"
+          alt="Waveless"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!--Product-->
+  <div class="relative">
+    <div
+      class="blurry_morph absolute mx-auto lg:top-[-10%] lg:top-0 lg:left-[-30%] z-0 w-full h-[300px] lg:h-[1000px] lg:w-[1000px]"
+      style="
+        background-image: radial-gradient(
+          closest-side,
+          rgba(75, 57, 239, 0.21),
+          rgba(0, 0, 0, 0)
+        );
+      "
+    ></div>
+    <div
+      class="relative z-0 2xl:h-[calc(73vh-80px)] mx-[20px] xl:mx-[200px] mt-[200px] mb-[300px] grid grid-cols-1 min-[591px]:grid-cols-2 min-[998px]:grid-cols-3 justify-between items-center max-[1001px]:gap-y-[40px] gap-[20px] text-white"
+    >
+      <!--Developing Product-->
+      <div
+        class="relative z-0 flex flex-col justify-center relative h-full px-[20px] lg:px-[15px] 2xl:px-[40px] py-[25px] bg-gradient-to-t from-transparent to-[#402162] w-full rounded-lg overflow-hidden group"
+      >
+        <div class="flex items-center gap-[8px] mb-[10px]">
+          <i class="fa-solid fa-certificate" style="color: gold"></i>
+          <span class="font-bold text-[#e28735] text-xl">Most wanted</span>
+        </div>
+        <span class="font-bold text-3xl mb-[20px]"
+          >Building Digital Excellence</span
+        >
+        <a
+          hx-post="{% url 'contact_us' %}"
+          hx-swap="transition:true"
+          hx-target="body"
+          class="bg-violet-700/25 z-20 cursor-pointer w-fit mt-[13px] mx-auto mb-[40px] text-white border-[#e28735] border hover:bg-gradient-to-r hover:from-indigo-700 hover:to-[#e28735] duration-300 ease-in rounded-md font-bold text-lg px-5 lg:px-10 py-2"
+        >
+          Let's Design Magic!"
+        </a>
+        <div class="flex flex-col gap-3 z-20">
+          <span class="font-bold text-[1.15883807169rem]">Includes</span>
+          <ul class="flex flex-col gap-2">
+            <li class="flex gap-[8px] items-center">
+              <i class="fa-solid fa-check text-blue-500 text-2xl font-bold"></i>
+              Wireframes
+            </li>
+            <li class="flex gap-[8px] items-center">
+              <i class="fa-solid fa-check text-blue-500 text-2xl font-bold"></i>
+              User Interface (UI)
+            </li>
+            <li class="flex gap-[8px] items-center">
+              <i class="fa-solid fa-check text-blue-500 text-2xl font-bold"></i>
+              Animation
+            </li>
+            <li class="flex gap-[8px] items-center">
+              <i class="fa-solid fa-check text-blue-500 text-2xl font-bold"></i>
+              Branding
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <span
+            class="absolute font-extrabold text-[171px] top-0 left-0 opacity-20 transform rotate-[27deg] text-orange-500 group-hover:top-[-5%] duration-700 ease-in-out"
+            >1</span
+          >
+          <span
+            class="absolute bottom-[3%] right-[11%] transform rotate-[334deg] text-[7rem] text-orange-500 opacity-70 group-hover:bottom-[0%] duration-700 ease-in-out"
+            >87</span
+          >
+          <span
+            class="text-[6rem] opacity-60 transform rotate-[134deg] text-orange-500 absolute top-[-13%] right-[25%] group-hover:top-[-9%] duration-700 ease-in-out"
+            >Q</span
+          >
+        </div>
+
+        <img
+          class="absolute bottom-0 right-[-25%] h-full z-0 object-contain 2xl:object-cover"
+          src="{% static 'Developer_Product.png' %}"
+          alt=""
+          style="
+            -webkit-mask-image: -webkit-gradient(
+              linear,
+              left 47%,
+              left bottom,
+              from(rgba(0, 0, 0, 1)),
+              to(rgba(0, 0, 0, 0))
+            );
+          "
+        />
+      </div>
+
+      <!--Premium-->
+
+      <div
+        class="flex flex-col h-[29em] lg:h-[calc(100%+60px)] justify-center relative px-[20px] lg:px-[15px] 2xl:px-[40px] bg-gradient-to-t from-transparent to-[#5f30b6] w-full rounded-lg overflow-hidden group"
+      >
+        <div class="z-30 flex items-center gap-[8px] mb-[10px]">
+          <i class="fa-solid fa-star" style="color: gold"></i>
+          <span class="font-bold text-[#e28735] text-xl">Most Popular</span>
+        </div>
+        <span class="z-20 font-bold text-3xl mb-[20px]"
+          >Building Digital Excellence</span
+        >
+        <a
+          hx-post="{% url 'contact_us' %}"
+          hx-swap="transition:true"
+          hx-target="body"
+          class="z-30 cursor-pointer w-fit mt-[13px] mx-auto mb-[40px] text-white border-[#e28735] border hover:bg-gradient-to-r hover:from-violet-900 from-50% hover:to-[#e28735] duration-300 ease-in rounded-md font-bold text-lg px-5 lg:px-10 py-2 bg-violet-700/25"
+          style="font-size: clamp(16px, 1.1rem, 18px)"
+        >
+          Let's Shape Your Vision!
+        </a>
+
+        <div>
+          <img
+            class="z-0 absolute top-[16%] left-[30%] group-hover:top-[11%] left-[30%] blur-[1px] h-[25px] rotate[21deg] duration-700 ease-in-out"
+            src="{% static 'Diamand.png' %}"
+            alt=""
+          />
+
+          <img
+            class="z-0 absolute top-[10px] left-0 group-hover:top-[0px] left-0 blur-[1px] h-[65px] rotate[309deg] duration-700 ease-in-out"
+            src="{% static 'Diamand.png' %}"
+            alt=""
+          />
+
+          <img
+            class="z-0 absolute top-[25%] right-[45%] group-hover:top-[20%] right-[45%] blur-[1px] h-[45px] rotate-[222deg] duration-700 ease-in-out"
+            src="{% static 'Diamand.png' %}"
+            alt=""
+          />
+
+          <img
+            class="z-0 absolute right-[40%] top-[8%] group-hover:top-[4%] top-[8%] blur-[1px] h-[37px] rotate-[222deg] duration-700 ease-in-out"
+            src="{% static 'Diamand.png' %}"
+            alt=""
+          />
+
+          <img
+            class="z-0 absolute top-0 right-[-4%] group-hover:top-[-3%] blur-[1px] h-[45px] rotate-[222deg] duration-700 ease-in-out"
+            src="{% static 'Diamand.png' %}"
+            alt=""
+          />
+        </div>
+
+        <img
+          class="object-contain 2xl:object-cover absolute bottom-0 right-[-25%] h-full z-20"
+          src="{% static 'Complete.png' %}"
+          alt=""
+          style="
+            -webkit-mask-image: -webkit-gradient(
+              linear,
+              left 47%,
+              left bottom,
+              from(rgba(0, 0, 0, 1)),
+              to(rgba(0, 0, 0, 0))
+            );
+          "
+        />
+      </div>
+
+      <!--Design Product-->
+      <div
+        class="flex flex-col justify-center relative h-full px-[20px] lg:px-[15px] 2xl:px-[40px] py-[25px] bg-gradient-to-t from-transparent to-[#402162] w-full rounded-lg overflow-hidden group"
+      >
+        <div class="z-30 flex items-center gap-[8px] mb-[10px]">
+          <i class="fa-solid fa-ranking-star" style="color: gold"></i>
+          <span class="font-bold text-[#e28735] text-xl">Most In-Demand</span>
+        </div>
+        <span class="z-20 font-bold text-3xl mb-[20px]"
+          >Building Digital Excellence</span
+        >
+        <a
+          hx-post="{% url 'contact_us' %}"
+          hx-swap="transition:true"
+          hx-target="body"
+          class="bg-violet-700/25 z-30 cursor-pointer w-fit mt-[13px] mx-auto mb-[40px] text-white border-[#e28735] border hover:bg-gradient-to-r hover:from-indigo-700 hover:to-[#e28735] duration-300 ease-in rounded-md font-bold text-lg px-5 lg:px-10 py-2"
+        >
+          Let's Design Magic!"
+        </a>
+        <div class="flex flex-col gap-3 z-30">
+          <span class="font-bold text-[1.15883807169rem]">Includes</span>
+          <ul class="flex flex-col gap-2">
+            <li class="flex gap-[8px] items-center">
+              <i class="fa-solid fa-check text-blue-500 text-2xl font-bold"></i>
+              Front-end Development
+            </li>
+            <li class="flex gap-[8px] items-center">
+              <i class="fa-solid fa-check text-blue-500 text-2xl font-bold"></i>
+              Back-end Development
+            </li>
+            <li class="flex gap-[8px] items-center">
+              <i class="fa-solid fa-check text-blue-500 text-2xl font-bold"></i>
+              Database Integration
+            </li>
+            <li class="flex gap-[8px] items-center">
+              <i class="fa-solid fa-check text-blue-500 text-2xl font-bold"></i>
+              API Development
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <img
+            class="absolute bottom-[-10%] group-hover:bottom-[-4%] rotate-[344deg] right-[-12%] z-10 h-[45%] duration-700 ease-in-out"
+            src="{% static 'splash.png' %}"
+            alt=""
+          />
+          <img
+            class="z-0 absolute top-[-10%] right-0 group-hover:top-[-4%] h-[200px] duration-700 ease-in-out"
+            src="{% static 'splatter.png' %}"
+            alt=""
+          />
+          <img
+            class="z-0 absolute top-[-5%] left-[-5%] group-hover:top-0 h-[180px] duration-700 ease-in-out"
+            src="{% static 'dripping.png' %}"
+            alt=""
+          />
+        </div>
+
+        <img
+          class="absolute bottom-0 right-[-25%] h-full z-20 object-contain 2xl:object-cover"
+          src="{% static 'Design_Product.png' %}"
+          alt=""
+          style="
+            -webkit-mask-image: -webkit-gradient(
+              linear,
+              left 47%,
+              left bottom,
+              from(rgba(0, 0, 0, 1)),
+              to(rgba(0, 0, 0, 0))
+            );
+          "
+        />
+      </div>
+    </div>
+  </div>
+
+  <!--Process-->
+  <div
+    class="grid grid-cols-1 2xl:grid-cols-9 auto-rows-auto gap-[30px] mx-[20px] xl:mx-[200px] text-white"
+  >
+    <!--Designing-->
+    <div
+      class="card_ relative flex flex-col justify-center gap-[16px] h-full 2xl:h-[300px] rounded-lg md:col-span-5 px-[20px] lg:px-[40px] py-[15px] bg-[#1A2533] bg-opacity-25 border border-[#1A2533]"
+    >
+      <span
+        class="font-bold text-4xl text-transparent bg-gradient-to-r from-violet-900 to-indigo-400 bg-clip-text"
+        >The Creative Marvels Hub</span
+      >
+      <p class="text-md opacity-40 leading-[1.7rem]">
+        Immerse yourself in the heart of our creative process, where your ideas
+        find expression through meticulously crafted visual designs. Each
+        element is uniquely tailored, ensuring your digital presence captures
+        the essence of your vision.
+      </p>
+    </div>
+    <div
+      class="card_ relative h-[300px] bg-[url('/static/Designing_2.png')] bg-cover rounded-lg md:col-span-4 px-[20px] lg:px-[40px] py-[15px] bg-[#1A2533] bg-opacity-25 border border-[#1A2533] overflow-hidden group"
+      style="background-position: 100% 22%"
+    >
+      <img
+        class="absolute bottom-0 group-hover:bottom-[4%] rotate-[344deg] right-0 z-10 h-[45%] duration-700 ease-in-out"
+        src="{% static 'splatter.png' %}"
+        alt=""
+      />
+      <img
+        class="absolute top-0 group-hover:top-[4%] rotate-[344deg] left-0 z-10 h-[45%] duration-700 ease-in-out"
+        src="{% static 'splatter.png' %}"
+        alt=""
+      />
+    </div>
+    <!--Coding-->
+
+    <div
+      class="card_ relative h-[300px] bg-[url('/static/Coder.png')] bg-cover bg-no-repeat bg-center rounded-lg md:col-span-5 px-[20px] lg:px-[40px] py-[15px] bg-[#1A2533] bg-opacity-25 border border-[#1A2533] overflow-hidden group"
+      style="background-position: 100% 5%"
+    >
+      <span
+        class="absolute font-extrabold text-[171px] top-0 left-0 opacity-20 transform rotate-[27deg] text-violet-700 group-hover:top-[-5%] duration-700 ease-in-out"
+        >1</span
+      >
+      <span
+        class="absolute bottom-[3%] right-[11%] transform rotate-[334deg] text-[8rem] text-violet-700 opacity-70 group-hover:bottom-[0%] duration-700 ease-in-out"
+        >87</span
+      >
+      <span
+        class="text-[4rem] opacity-60 transform rotate-[134deg] text-violet-700 absolute top-[-8%] right-[25%] group-hover:top-[-9%] duration-700 ease-in-out"
+        >Q</span
+      >
+    </div>
+    <div
+      class="card_ relative flex flex-col justify-center gap-[20px] h-full 2xl:h-[300px] rounded-lg md:col-span-4 px-[20px] lg:px-[40px] py-[15px] bg-[#1A2533] bg-opacity-25 border border-[#1A2533]"
+    >
+      <span
+        class="font-bold text-4xl text-transparent bg-gradient-to-r from-violet-900 to-indigo-400 bg-clip-text"
+        >Building Tomorrow</span
+      >
+      <p class="text-md opacity-40 leading-[1.7rem]">
+        Witness the transformation of your vision into a fully functional
+        digital presence. Our skilled developers work diligently, breathing life
+        into your designs and ensuring your project isn't just an idea but a
+        tangible and functional reality.
+      </p>
+    </div>
+    <!--Testing-->
+
+    <div
+      class="card_ relative h-[300px] bg-[url('/static/Detective.png')] bg-cover bg-center bg-no-repeat rounded-lg md:col-span-3 px-[20px] lg:px-[40px] py-[15px] bg-[#1A2533] bg-opacity-25 border border-[#1A2533] overflow-hidden group"
+    >
+      <img
+        class="h-[47px] absolute top-2 group-hover:top-[4%] rotate-[182deg] left-0 z-10 h-[45%] duration-700 ease-in-out"
+        src="{% static 'Magnifying.png' %}"
+        alt=""
+      />
+      <img
+        class="h-[47px] absolute top-[40%] group-hover:top-[35%] rotate-[102deg] right-0 z-10 h-[45%] duration-700 ease-in-out"
+        src="{% static 'Magnifying.png' %}"
+        alt=""
+      />
+    </div>
+    <div
+      class="card_ relative flex flex-col justify-center gap-[20px] h-full 2xl:h-[300px] rounded-lg md:col-span-6 px-[20px] lg:px-[40px] py-[15px] bg-[#1A2533] bg-opacity-25 border border-[#1A2533]"
+    >
+      <span
+        class="font-bold text-4xl text-transparent bg-gradient-to-r from-violet-900 to-indigo-400 bg-clip-text"
+        >Fine Tuning</span
+      >
+      <p class="text-md opacity-40 leading-[1.7rem]">
+        Enter the realm of meticulous refinement. Every pixel, every interaction
+        is fine-tuned to perfection, creating a seamless and delightful user
+        experience that goes beyond meeting expectations to exceed them.
+      </p>
+    </div>
+    <!--Launch-->
+    <div
+      class="card_ relative flex flex-col justify-center gap-[20px] h-full 2xl:h-[300px] rounded-lg md:col-span-4 px-[20px] lg:px-[40px] py-[15px] bg-[#1A2533] bg-opacity-25 border border-[#1A2533]"
+    >
+      <span
+        class="font-bold text-4xl text-transparent bg-gradient-to-r from-violet-900 to-indigo-400 bg-clip-text"
+        >The Big Reveal</span
+      >
+      <p class="text-md opacity-40 leading-[1.7rem]">
+        Step into the limelight as we introduce your project to the digital
+        world with an electrifying reveal. This marks the moment your creation
+        takes its place in the online spotlight, ready to make an impact.
+      </p>
+    </div>
+    <div
+      class="card_ relative h-[300px] bg-[url('/static/Launch.jpg')] bg-cover rounded-lg md:col-span-5 px-[20px] lg:px-[40px] py-[15px] bg-[#1A2533] bg-opacity-25 border border-[#1A2533] overflow-hidden group"
+      style="background-position: 100% 22%"
+    ></div>
+    <div
+      class="card_ relative flex flex-col justify-center items-center gap-[10px] h-fit rounded-lg md:col-span-9 px-[20px] lg:px-[40px] py-[15px] bg-[#1A2533] bg-opacity-25 border border-[#1A2533]"
+    >
+      <p class="text-lg opacity-80">
+        Are you a developer? Let's work together to make something spectacular.
+        Do you require assistance? I'm here to assist! 🚀
+      </p>
+      <a
+        hx-post="{% url 'contact_us' %}"
+        hx-swap="transition:true"
+        hx-target="body"
+        class="z-30 cursor-pointer w-fit mt-[13px] bg-indigo-700 hover:bg-gradient-to-r hover:from-indigo-700 hover:to-[#e28735] duration-300 ease-in rounded-md text-white font-bold text-lg px-10 py-2"
+      >
+        Let's Team Up!
+      </a>
+    </div>
+  </div>
+
+  <!-- Call to action
+  <p>Make a call to action</p>
+  Produc
+  <p>Describe your service (web design , developemnt) in a visual way, think</p>
+
+  Proccess of wor
+  <p>show you step of working , use just GPT to make this</p>
+
+  FAQ
+  <div class="mx-[20px] 2xl:mx-[200px]">
+    <span class="text-white">FAQ ?</span>
+    <ul class="text-white">
+      <li>Question</li>
+      <li>Question</li>
+      <li>Question</li>
+      <li>Question</li>
+      <li>Question</li>
+    </ul>
+  </div>
+  <p>Think of the question that user will likely to think of</p> -->
+
+  <!--Call to action-->
+  <div class="relative">
+    <div
+      class="blurry_morph absolute mx-auto lg:top-[-10%] lg:bottom-0 lg:right-[-30%] z-0 w-full h-[300px] lg:h-[1000px] lg:w-[1000px]"
+      style="
+        background-image: radial-gradient(
+          closest-side,
+          rgba(75, 57, 239, 0.21),
+          rgba(0, 0, 0, 0)
+        );
+      "
+    ></div>
+    <div
+      class="h-[50em] lg:h-[30em] xl:h-[27em] bg-gradient-to-t from-violet-900 to-[#171635] xl:mx-[200px] xl:rounded-xl my-[380px] relative pr-8"
+    >
+      <img
+        src="{% static 'avrallill_custom.png' %}"
+        class="absolute left-0 bottom-0 object-cover h-[33em]"
+        alt="Avrallill"
+      />
+      <div
+        class="px-[30px] py-[15px] lg:p-0 w-fit lg:float-right min-[1600px]:mx-auto flex flex-col gap-5 text-white lg:w-[50%] h-full justify-start lg:justify-center"
+      >
+        <span class="text-6xl font-bold md:text-7xl stroke-black stroke-1"
+          >Let's Create Something Awesome!</span
+        >
+        <p class="text-[1.06rem] font-regular">
+          Got a project in mind? I'm all ears! Let's chat about your ideas and
+          turn them into a digital masterpiece, together.
+        </p>
+
+        <a
+          hx-post="{% url 'contact_us' %}"
+          hx-swap="transition:true"
+          hx-target="body"
+          class="z-10 lg:z-0 cursor-pointer mt-[13px] w-fit border-indigo-300 bg-[#15191E] hover:bg-gradient-to-r hover:from-[#4b39ef] hover:to-[#3998ef] duration-300 ease-in rounded-md text-white hover:text-white font-bold text-lg px-6 py-2"
+        >
+          Let's Get Started!
+        </a>
+      </div>
+    </div>
+  </div>
+  <!--Service-->
+  <!--<div class="relative flex flex-col mx-[20px] xl:mx-[200px] gap-[50px]">
+    <div class="flex flex-row items-center gap-[100px]">
+      <div class="absolute right-0 top-0 flex gap-[10px]">
+        <input
+          type="radio"
+          name="versionType"
+          id="mobileRadioButtonVersion"
+          class="hidden peer/mobile"
+          hx-get="{% url 'get_version' version='mobile' %}"
+          hx-target="#version"
+          hx-swap="innerHTML"
+          checked
+        />
+        <label
+          for="mobileRadioButtonVersion"
+          class="w-[50px] h-[60px] rounded-[5px] peer-checked/mobile:bg-[#4B39EF] peer-checked/mobile:hover:bg-[#4B39EF] bg-[#243347] flex justify-center items-center text-2xl cursor-pointer"
+        >
+          <i class="fa-solid fa-mobile" style="color: #ffffff"></i>
+        </label>
+
+        <input
+          type="radio"
+          name="versionType"
+          id="webRadioButtonVersion"
+          class="hidden peer/web"
+          hx-get="{% url 'get_version' version='web' %}"
+          hx-target="#version"
+          hx-swap="innerHTML"
+        />
+        <label
+          for="webRadioButtonVersion"
+          class="w-[50px] h-[60px] rounded-[5px] peer-checked/web:bg-[#4B39EF] peer-checked/web:hover:bg-[#4B39EF] bg-[#243347] flex justify-center items-center text-2xl cursor-pointer"
+        >
+          <i class="fa-solid fa-laptop" style="color: #ffffff"></i>
+        </label>
+      </div>
+      {% include "Components/Version.html" %}
+    </div>
+  </div>-->
+</section>
+{% endblock content %} {% block style %}
+<style>
+  .card_:hover:before {
+    opacity: 1;
+  }
+  .card_::before {
+    background: radial-gradient(
+      800px circle at var(--mouse-x) var(--mouse-y),
+      rgba(255, 255, 255, 0.06),
+      transparent 40%
+    );
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    transition: opacity 500ms;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 20;
+  }
+
+  .shadowfilter {
+    backdrop-filter: blur(10px) saturate(1);
+  }
+
+  .animo:hover .slide_ {
+    animation-play-state: paused;
+  }
+
+  @keyframes marques {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .slide_ {
+    animation: 15s marques infinite linear;
+  }
+</style>
+{% endblock style %} {% block script %}
+<script>
+  const mouseTrackerObserver = (event) => {
+    const { currentTarget: target } = event;
+
+    const rect = target.getBoundingClientRect(),
+      x = event.clientX - rect.left,
+      y = event.clientY - rect.top;
+
+    target.style.setProperty("--mouse-x", `${x}px`);
+    target.style.setProperty("--mouse-y", `${y}px`);
+  };
+
+  for (const card of document.querySelectorAll(".card_")) {
+    card.onmousemove = (event) => mouseTrackerObserver(event);
+  }
+</script>
+
+{% endblock script %}

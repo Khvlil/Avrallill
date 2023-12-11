@@ -1,0 +1,54 @@
+{% load static %}
+<div id="version" class="flex flex-col gap-[18px]" >
+  {% if version == 'web' %}
+    <div class="flex flex-col gap-[8px]">
+      <span class="text-7xl font-bold text-white capitalize"
+        >title for web</span
+      >
+      <span class="text-xl font-thin text-white">subtitle for web</span>
+    </div>
+    <p class="text-[#bababa]">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry. Lorem Ipsum has been the industry's standard dummy text ever
+      since the 1500s,
+    </p>
+
+  <div class="relative">
+    <img src="{% static 'Service-Web.png' %}" alt="Service-Web" />
+    <span
+      class="text-white text-2xl font-bold opacity-[0.2] absolute bottom-[5px] right-[20px]"
+      >AI Powered</span
+    >
+  </div>
+  {% else %}
+  <div class="flex flex-col gap-[18px]" id="version">
+    <div class="flex flex-col gap-[8px]">
+      <span class="text-7xl font-bold text-white capitalize"
+        >title for mobile</span
+      >
+      <span class="text-xl font-thin text-white">subtitle for mobile</span>
+    </div>
+    <p class="text-[#bababa]">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry. Lorem Ipsum has been the industry's standard dummy text ever
+      since the 1500s,
+    </p>
+  </div>
+
+  <div class="relative">
+    <img
+      src="{% static 'Service-Mobile.png' %}"
+      class="ml-auto"
+      alt="Service-Mobile"
+    />
+    <span
+      class="text-white text-2xl font-bold opacity-[0.2] absolute bottom-[5px] right-[20px]"
+      >AI Powered</span
+    >
+  </div>
+  {% endif %}
+</div>

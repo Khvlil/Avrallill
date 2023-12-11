@@ -1,0 +1,178 @@
+{% extends "Base.html" %} {% load static %} {% block title %} Avrallill ∞
+{{project.project }} {% endblock title %} {% block content %}
+<div
+  class="blurry_morph absolute top-0 lg:top-[-100%] z-0 w-full h-[300px] lg:h-[1000px] lg:w-[1000px]"
+  style="
+    background-image: radial-gradient(
+      closest-side,
+      rgba(75, 57, 239, 0.21),
+      rgba(0, 0, 0, 0)
+    );
+    background-attechement: fixed;
+  "
+></div>
+<div
+  class="flex flex-col lg:flex-row gap-[4em] lg:gap-[20px] mx-[40px] lg:mx-[150px]"
+>
+  <button
+    class="fixed z-10 bottom-[10px] mx-[20px] text-white text-center right-0 left-0 lg:hidden bg-[#4B39EF] font-bold py-[10px] rounded-[5px] hover:bg-[#6052E5]"
+  >
+    Contact Us
+  </button>
+  {% if project is not None %}
+  <!-- Post -->
+  <div class="lg:w-[70%] text-[#D0D0D0]">
+    <div class="flex flex-col mb-[25px]">
+      <span class="text-7xl font-bold">{{ project.project }}</span>
+      <span class="text-md font-thin">{{ project.project_date_created }}</span>
+    </div>
+    <div class="flex flex-col gap-[30px] text-[#D0D0D0]">
+      <span class="capitalize font-bold text-4xl">project overview</span>
+      <p class="leading-[1.8rem]">{{ project.project_overview }}</p>
+      <img class="rounded-[5px]" src="{{ designs.0.image.url }}" alt="" />
+      <span class="capitalize font-bold text-4xl"
+        >research and inspiration</span
+      >
+      <p class="leading-[1.8rem]">{{ project.research_and_inspiration }}</p>
+      <span class="capitalize font-bold text-4xl">problem statement</span>
+      <p class="leading-[1.8rem]">{{ project.problem_statement }}</p>
+      <span class="capitalize font-bold text-4xl"
+        >concept and design principles</span
+      >
+      <p class="leading-[1.8rem]">
+        {{ project.concept_and_design_principles }}
+      </p>
+      <img class="rounded-[5px]" src="{{ designs.1.image.url }}" alt="" />
+      <span class="capitalize font-bold text-4xl"
+        >challenges and solutions</span
+      >
+      <p class="leading-[1.8rem]">{{ project.challenges_and_solutions }}</p>
+      <img class="rounded-[5px]" src="{{ designs.2.image.url }}" alt="" />
+      <span class="capitalize font-bold text-4xl"
+        >conclusion and next steps</span
+      >
+      <p class="leading-[1.8rem]">{{ project.conclusion_and_next_steps }}</p>
+    </div>
+  </div>
+
+  <!-- Recommendation -->
+  <div class="lg:w-[30%] flex flex-col gap-[20px]">
+    <div class="columns-2 gap-[8px] mt-[20px]">
+      <!-- Gallery -->
+      {% for gallery_item in project.post_gallery.all %}
+      <div class="mb-[8px] w-full break-inside-avoid">
+        <img
+          class="rounded-[5px] max-w-full"
+          src="{{ gallery_item.gallery.url }}"
+          alt=""
+        />
+      </div>
+      {% endfor %}
+    </div>
+    {% if project.show_advertise %}
+    <div class="w-full bg-[#212C3E] rounded-[5px] h-fit text-white relative">
+      <div class="object-cover h-[140px] bg-green-900 rounded-[5px]">
+        <img
+          src="{% static 'fiverr.png' %}"
+          class="h-[80%] mx-auto my-0"
+          alt=""
+        />
+      </div>
+      <div class="flex flex-col gap-[5px] px-[10px]">
+        <div class="flex gap-2">
+          <img
+            src="{% static 'Me.jpg' %}"
+            class="h-[85px] rounded-full mt-[-27px] outline outline-[#212C3E] outline-4"
+            alt="Profile"
+          />
+          <span class="font-bold">Explore Specialized Services on Fiverr</span>
+        </div>
+        <p>
+          In addition to personalized services, I offer specialized gigs on
+          Fiverr. Whether it's crafting mobile app magic, building web wonders,
+          or designing delightful experiences, find affordable solutions
+          tailored to your specific requirements.
+        </p>
+        <a
+          href="https://www.fiverr.com/mohammed_khvlil"
+          target="_blank"
+          class="bg-green-700 w-fit px-4 py-2 my-[10px] text-md font-bold text-white rounded-[5px] hover:bg-green-600 animation duration-[0.3s] ease-out"
+        >
+          Discover on Fiverr
+        </a>
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="sticky top-[35px] flex flex-col gap-[20px] text-white">
+      {% if works is not None %} {% for project in recommendation %}
+      <a
+        class="hover:bg-[#3B547A] bg-[#283B57] h-fit flex flex-col px-[20px] py-[20px] rounded-[5px] gap-[18px] cursor-pointer"
+        hx-get="{% url 'show_project' project_name=project.project %}"
+        hx-replace-url="true"
+        hx-target="body"
+        hx-swap="outerHTML show:window:top transition:true"
+      >
+        <div class="flex gap-[10px]">
+          <img
+            src="{{ project.project_cover.url }}"
+            class="rounded-full w-[30px] h-[50px] object-cover"
+            alt="Faz"
+          />
+
+          <div class="flex flex-col">
+            <span class="font-bold text-lg">{{project.project}}</span>
+            <span class="font-thin line-clamp-1"
+              >{{project.project_overview}}</span
+            >
+          </div>
+        </div>
+      </a>
+      {% endfor %} {% else %}
+      <p>Loading ...</p>
+      {% endif %}
+
+      <div class="flex flex-col gap-[8px]">
+        <button
+          hx-get="{% url 'contact_us' %}"
+          hx-target="body"
+          hx-swap="innerHTML transition:true"
+          class="lg:block hidden bg-[#4B39EF] font-bold py-[10px] rounded-[5px] hover:bg-[#6052E5]"
+        >
+          Contact Us
+        </button>
+        {% if project.github_link is not None %}
+        <a
+          href="{{project.github_link}}"
+          target="_blank"
+          class="bg-white hover:bg-indigo-700 group text-black font-bold py-[6px] rounded-[5px] flex items-center group-hover:text-white justify-center gap-[10px]"
+        >
+          <i
+            class="fa-brands fa-github text-2xl text-black group-hover:text-white"
+          ></i>
+          Github
+        </a>
+        {% endif %} {% if project.figma_link is not None %}
+        <a
+          href="{{project.figma_link}}"
+          target="_blank"
+          class="bg-white hover:bg-indigo-700 group text-black font-bold py-[6px] rounded-[5px] group-hover:text-white flex items-center justify-center gap-[10px]"
+        >
+          <i
+            class="fa-brands fa-figma text-2xl text-black group-hover:text-white"
+          ></i>
+          Figma
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</div>
+{% endblock content %} {% block style %}
+<style>
+  #bottomNav {
+    display: none !important;
+  }
+</style>
+{% endblock style %}
