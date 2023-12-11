@@ -1,13 +1,13 @@
 {
     "builds": [{
-        "src": "Avraham/wsgi.py",
+        "src": "Portfolio/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
     }],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "Avraham/wsgi.py"
+            "dest": "Portfolio/wsgi.py"
         }
     ]
 }
